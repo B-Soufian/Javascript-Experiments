@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+
+        }
+        p{
+            padding: 10px;
+            margin: 3px;
+            background-color: rgb(65, 65, 253);
+            color: white;
+            border-radius: 3px;
+            
+        }
+        span{
+            padding:2px 5px;
+            border-radius: 10%;
+            background-color: white;
+            color: rgb(65, 65, 253);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>MODULES DE L'ANNEE</h1>
+
+    </div>
+</body>
+<script>
+    let array = ["Les bases de l'agorthmique","Programmatin Orientee Object" ,"Sites Web Stratique","Bases de donnees","Programmation JavaScript","Sites Web Dynamiques","Securite des systemes d'information"]
+    for(let i = 0;i<array.length;i++){
+        let p = document.createElement("p")
+        p.innerHTML =  `<span>${i}</span> ${array[i]} `
+        document.querySelector("div").appendChild(p)
+    }
+</script>
+</html>

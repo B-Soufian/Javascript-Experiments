@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 60%;
+            margin: auto;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 20%;
+        }
+        .flag{
+            display: flex;
+            gap: 5px;
+            background-color: rgba(128, 128, 128, 0.282);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    </div>
+</body>
+<script>
+    let flags = ["flags/maroc.png","flags/mauritania.png","flags/algeria.png","flags/tunisia.png","flags/libya.png","flags/egypt.png"]
+    let names = ["Maroc","Mauritania","Algeria","Tunisia","Libya","Egypt"]
+    
+    for(let i = 0;i<flags.length;i++){
+        let div = document.createElement("div")
+        div.className = "flag"
+        div.style.justifyContent = "center"
+        div.style.alignItems = "center"
+        div.style.gap = "20px"
+        let img = document.createElement("img")
+        img.src = flags[i]
+        let p = document.createElement("p")
+        p.textContent = names[i]
+        p.style.fontSize = 25
+
+        div.appendChild(img)
+        div.appendChild(p)
+        document.querySelector(".parent").appendChild(div)
+    }
+</script>
+</html>

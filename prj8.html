@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .parent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+        input{
+            border: 1px solid rgba(0, 0, 255, 0.375);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #ajout{
+            all: initial;
+            background-color: rgb(33, 33, 33);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .card button{
+            all: initial;
+            font-size: 10px;
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+        .card{
+            border: 1px solid rgba(4, 4, 166, 0.433);
+            background-color: rgba(183, 183, 223, 0.798);
+            padding: 5px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-block: 10px;
+        
+
+        }
+        span{
+            background-color: white;
+            font-weight: bold;
+            padding-inline: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+
+        }
+        #remove{
+            color: rgb(239, 46, 46);
+            margin-left: 10px;
+
+        }
+        #edit{
+            color: rgb(246, 246, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h3>MODULES DE L'ANNEE</h3>
+        <div>
+            <input type="text" placeholder="Nom De Module.." id="inp">
+            <button id="ajout" type="button" onclick="Ajouter()">Ajouter</button>
+        </div>
+        <div id="cards">
+            <div class="card">
+                <span>1</span> Les Bases de l'algorithmique
+                <button type="button" onclick="remove()" id="remove"><i class="fa-solid fa-trash"></i></button> 
+                <button type="button" onclick="edit()" id="edit"><i class="fa-solid fa-pen"></i></button>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let modules  = []
+    function Ajouter(){
+        let input = document.getElementById("inp").value
+        if(input == ""){
+            alert ("vide")
+            return false
+        }
+        modules.push(input)
+        afficher()
+    }
+    function afficher(){
+        let div = document.getElementById("cards")
+        div.innerHTML = ""
+        for(let i = 0;i<modules.length;i++){
+            let res = `
+                <div class="card">
+                <span>${i + 1}</span> ${modules[i]}
+                <button type="button" onclick="remove(${i})" id="remove"><i class="fa-solid fa-trash"></i></button> 
+                <button type="button" onclick="edit(${i})" id="edit"><i class="fa-solid fa-pen"></i></button>
+            </div>
+            `
+            div.innerHTML +=res
+        }
+    }
+    function remove(i){
+        modules.splice(i,1)
+        afficher()
+    }
+    function edit(i){
+        let input = document.getElementById("inp")
+        input.value = modules[i]
+        let ajt = document.getElementById("ajout")
+        ajt.textContent = "Modifier"
+        ajt.onclick =  function() { modifier(i); }
+    }
+    function modifier(i){
+        let input = document.getElementById("inp").value
+        modules[i] = input
+        afficher()
+        let ajt = document.getElementById("ajout")
+        ajt.textContent = "Ajouter"
+        ajt.onclick =  Ajouter
+    }
+</script>
+</html>

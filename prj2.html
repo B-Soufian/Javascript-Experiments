@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin: auto
+
+        }
+        span{
+            color: rgb(67, 64, 64);
+        font-size: 10px;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+        button{
+            width: fit-content;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="">Email address</label>
+        <input type="email" id="email">
+        <span>We'll never share your email with anyone else</span>
+        <label for="">Password</label>
+        <input type="password" id="pass">
+        <button type="button" onclick="chake()" class="btn btn-primary">Connexion</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script>
+    let pa = document.createElement("p")
+    function chake(){
+        let email = document.getElementById("email").value
+        let pass = document.getElementById("pass").value
+        
+        if(!email == "" && !pass == ""){
+            if(email == "cmc@gmail.com" && pass == "12345678"){
+                pa.innerHTML = "Authentification avec succes"
+                pa.className = "alert alert-success"
+            }
+            else{
+                pa.innerHTML = "Authentification refuse"
+                pa.className = "alert alert-danger"
+            }
+        }
+        document.querySelector("div").appendChild(pa)
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(245, 169, 169);
+            width: fit-content;
+            margin: auto;
+        }
+        button{
+            border-radius: 5px;
+            background-color: rgb(122, 5, 5);
+            color: white;
+            padding: 5px;
+        }
+        input{
+            padding: 5px;
+            border-radius: 3px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" id="inp">
+        <button type="button" onclick="clac()">Calculer</button>
+        <p id="res"></p>
+    </div>
+</body>
+<script>
+    function clac(){
+        let input=parseFloat ( document.getElementById("inp").value)
+        let res = document.querySelector("#res")
+        if(!input==""){
+            if(input > 500){
+                input-=input*0.1
+            }
+        }
+        res.innerHTML = `Le montant a payer : <strong> ${input} </strong>`
+        
+    }
+</script>
+</html>
