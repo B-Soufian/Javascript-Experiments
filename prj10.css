@@ -1,0 +1,174 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactlist,.contactinfo,.addcontact{
+    width: 25%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(213, 250, 250, 0.925);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    height: 90%;
+    overflow:auto;
+}
+.hidden{
+    display: none;
+}
+.contacts{
+    width: 100%;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(3, 82, 82);
+}
+.contact p{
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: 10px;
+    color: rgb(5, 115, 115);
+    
+}
+.contact span{
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: rgb(4, 136, 136);
+}
+input[type="search"]::-webkit-search-cancel-button {
+    all: initial;
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type="search"]{
+    all: initial;
+    padding: 5px;
+}
+.search{
+    all: initial;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 5px;
+    button{
+        all: initial;
+        margin: 3px;
+    }
+}
+.contact .x{
+    color: red;
+    width: 20px;
+    height: 20px;
+    font-size: 20;
+}
+.add{
+    all: initial;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i{
+        color: rgb(4, 136, 136);
+    }
+}
+
+.forward{
+    color: rgb(7, 190, 190);
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left: 20;
+}
+.infocon{
+    background-color: white;
+    padding: 5px;
+    width: 85%;
+    height: 35%;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    position: relative;
+    .user{
+        padding: 10px;
+        font-size: 50px;
+        border: 1px solid rgb(25, 161, 161);
+        color: rgb(25, 161, 161);
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: -40px;
+        background-color: white;
+    }
+    p{
+        color: rgb(4, 138, 138);
+        margin: 5px;
+    }
+    .phoen{
+        color: white;
+        background-color: rgb(25, 161, 161);;
+        padding: 5px;
+        height: 35px;
+        width: 35px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+}
+.addcontact .inputs{
+    width: 90%;
+    margin-top: 20px;
+    input{
+        all: initial;
+        padding: 5px;
+        height: 30px;
+        background-color: white;
+        width: 100%;
+        margin-block: 10px;
+        border-radius: 5px;
+    }
+    button{
+        all: initial;
+        padding:10px 5px ;
+        width: 100%;
+        background-color: rgb(25, 161, 161);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+
+    }
+
+}

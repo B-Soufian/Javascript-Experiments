@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="prj10.css">
+<body>
+    <div class="contactlist ">
+        <h2 style="color: rgb(7, 190, 190); margin: 5px;">Liste Des Contacts</h2>
+        <div class="head">
+            <div class="search">
+                <input type="search" id="search">
+                <button onclick="search()" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <button class="add" onclick="add()" type="button"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="contacts">
+            
+        </div>
+    </div>
+    <div class="hidden contactinfo">
+            <h2 style="color: rgb(7, 190, 190); margin: 5px;"><span onclick="home()" class="forward"><i class="fa-solid fa-arrow-left"></i></span>contact Infos</h2>
+            
+            <div class="infocon">
+                
+            </div>
+    </div>
+    <div class="hidden addcontact">
+        <h2 style="color: rgb(7, 190, 190); margin: 5px;"><span onclick="home()" class="forward"><i class="fa-solid fa-arrow-left"></i></span>Nouveau Contact</h2>
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Nom de contact" required>
+            <input type="text" id="phone" placeholder="Numero telephone" required>
+            <button onclick="addcontact()" type="button">Ajouter</button>
+        </div>
+    </div>
+</body>
+<script src="prj10.js"></script>
+</html>
