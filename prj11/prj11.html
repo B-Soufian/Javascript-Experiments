@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="prj11.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Listes des stagiaires</h2>
+            <button onclick="addstag()" type="button"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="search">
+            <p onclick="search('DD')">Developpment Digital</p>
+            <p onclick="search('UIX')">UI/UX</p>
+            <p onclick="search('ID')">Infrastructure Digital</p>
+            <p onclick="search('IA')">Intelligence Artificielle</p>
+            <p onclick="search('All')">ALL</p>
+        </div>
+
+        <div class="cards ">
+            <div class="card">
+                    <div class="actions">
+                        <button onclick="confirme()"><i class="fa-solid fa-trash"></i></button>
+                        <button class="edite" onclick="edite()"><i class="fa-solid fa-pen-to-square"></i></button> 
+                    </div>
+                    <div class="image">
+                        <img src="images/girl-removebg-preview.png" alt="boy">
+                    </div>
+                    <h5>Soufian Bouhmad</h5>
+                    <p>stagiaire - DD105</p>
+                    <div class="note">
+                        <span class="rank">#1</span>
+                        <p>Moyenne : 12,50</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="remove hidden">
+            
+        </div>
+
+        <div class="add hidden">
+            <h4>Formulaire dinscription</h4>
+            <form action="">
+                    <div class="row">
+                        <input type="text" id="nom" placeholder="Nom...">
+                        <input type="text" id="prenom" placeholder="Prenom...">
+                        <select name="" id="genre">
+                                <option disabled selected value="">Genre</option>
+                                <option value="M">Male</option>
+                                <option value="F">Famele</option>
+                        </select>
+                    </div>
+                    <div class="rowS">
+                        <select name="" id="specialite">
+                            <option disabled selected value="">Specialite</option>
+                            <option value="DD">Developpment Digital</option>
+                            <option value="UIX">UI/UX</option>
+                            <option value="ID">Infrastructure Digital</option>
+                            <option value="IA">Intelligence Artificielle</option>
+                        </select>
+                        <select name="" id="classe">
+                            <option disabled selected value="">Classe</option>
+                            <option value="101">101</option>
+                            <option value="102">102</option>
+                            <option value="103">103</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <input id="c1" type="number" placeholder="Note M101"> 
+                        <input id="c2" type="number" placeholder="Note M102"> 
+                        <input id="c3" type="number" placeholder="Note M103"> 
+                    </div>
+                    <div class="button">
+                        <button class="annuler" onclick="cards()">Annuler</button>
+                        <button id="ajt" onclick="add()" type="button">Ajouter le Stagiare</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="prj11.js"></script>
+</html>
