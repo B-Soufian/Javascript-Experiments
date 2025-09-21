@@ -6,7 +6,8 @@ These practice projects demonstrate DOM manipulation, arrays, forms, simple CRUD
 ---
 
 ## Projects included (short list & descriptions)
-
+ 
+- **Calculator** — Simple calculator UI: enter expressions with buttons, press = to evaluate and C to clear.
 - **product-table-crud.html** — simple product table where you can add/remove products.  
 - **discount-calculator.html** — price input with a 10% discount if amount > 500.  
 - **login-form.html** — basic email/password front-end validation demo.  
@@ -26,6 +27,6 @@ These practice projects demonstrate DOM manipulation, arrays, forms, simple CRUD
 
 1. Clone or download the repository.  
 2. Open any `.html` file in your browser to view and interact with the project.  
-3. For multi-file projects (`prj10`, `prj11`, `students-dashboard`, `contact-manager`), ensure the related `.js`, `.css`, and image files are in the correct paths.
+3. For multi-file projects (`students-dashboard`, `contact-manager`), ensure the related `.js`, `.css`, and image files are in the correct paths.
 
 ---
